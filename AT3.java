@@ -15,26 +15,29 @@ public class AT3a {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        double massa, finalms = 0;
+        double massa, massal, finalms = 0;
         int sec = 0;
+        int hora, min, secc, s;
+        
         System.out.println("Insira a massa em gramas");
         massa = sc.nextDouble();
-        int hora, min, secc;
-
+        massal = (massa);
+        
         do {
+            
             finalms = (massa / 2);
             massa = finalms;
             sec = sec + 50;
         } while (massa > 0.5);
-        int s = sec * 50;
+        s = sec * 50;
         hora = (s / 3600);
         min = ((s - (hora * 3600)) / 60);
-        secc = (s - (hora * 3600) + (min * 60));
-        System.out.println(massa);
-        System.out.println(sec);
-        System.out.println();
-        System.out.println(hora);
-        System.out.println(min);
-        System.out.println(secc);
+        secc = (s - (hora * 3600) - (min * 60));
+        System.out.println("A massa inicial é de: " + massal);
+        System.out.println("A massa final é de: " + finalms);
+        System.out.println("Tempo demorado: ");
+        System.out.println("Horas: " + hora);
+        System.out.println("Minutos: " + min);
+        System.out.println("Segundos: " + secc);
     }
 }
